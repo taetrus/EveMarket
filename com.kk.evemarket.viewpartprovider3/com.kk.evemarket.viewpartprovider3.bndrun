@@ -1,0 +1,67 @@
+#
+# com.kk.evemarket.viewpartprovider3 LAUNCH SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		com.kk.evemarket.viewpartprovider3.launch
+JPM-Command:				provider
+
+
+
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
+-runrequires: bnd.identity;version='latest';id='com.kk.evemarket.viewpartprovider3'
+
+-runsystempackages:\
+com.sun.javafx.collections,\
+com.sun.javafx.css,\
+com.sun.javafx.css.converters,\
+com.sun.javafx.event,\
+com.sun.javafx.runtime,\
+com.sun.javafx.scene.control,\
+com.sun.javafx.scene.control.behavior,\
+com.sun.javafx.scene.control.skin,\
+com.sun.javafx.scene.text,\
+com.sun.javafx.scene.traversal,\
+com.sun.javafx.webkit,\
+com.sun.webkit,\
+javafx.animation,\
+javafx.application,\
+javafx.beans,\
+javafx.beans.binding,\
+javafx.beans.property,\
+javafx.beans.value,\
+javafx.collections,\
+javafx.collections.transformation,\
+javafx.concurrent,\
+javafx.css,\
+javafx.event,\
+javafx.fxml,\
+javafx.geometry,\
+javafx.scene,\
+javafx.scene.chart,\
+javafx.scene.control,\
+javafx.scene.control.cell,\
+javafx.scene.image,\
+javafx.scene.input,\
+javafx.scene.layout,\
+javafx.scene.media,\
+javafx.scene.paint,\
+javafx.scene.shape,\
+javafx.scene.text,\
+javafx.scene.transform,\
+javafx.scene.web,\
+javafx.stage,\
+javafx.util,\
+javafx.util.converter,\
+javax.swing,\
+javax.swing.table,\
+sun.misc
+-runbundles: \
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.8.5,2.8.6)',\
+	com.kk.evemarket.common;version='[1.0.0,1.0.1)',\
+	com.kk.evemarket.view.api;version='[1.0.0,1.0.1)',\
+	com.kk.evemarket.viewpartprovider3;version='[1.0.0,1.0.1)',\
+	org.apache.felix.scr;version='[2.1.10,2.1.11)',\
+	org.osgi.service.event;version='[1.4.0,1.4.1)'

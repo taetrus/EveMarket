@@ -1,0 +1,13 @@
+#
+# com.kk.evemarket.model.provider DEBUG LAUNCH SPECFICATION 
+#
+
+-include: ~com.kk.evemarket.model.provider.bndrun
+
+-runrequires.debug:  \
+	${debug-bundles}
+
+-runtrace: true
+
+-runbundles: \
+	${error;Resolve first}

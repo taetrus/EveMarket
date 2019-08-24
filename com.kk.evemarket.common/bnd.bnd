@@ -1,0 +1,31 @@
+#
+# com.kk.evemarket.common PROVIDER BUNDLE
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: \
+	The provider bundle for com.kk.evemarket.common. \
+	\
+
+Export-Package: \
+	com.kk.evemarket.common,\
+	com.kk.evemarket.common,\
+	com.kk.evemarket.common.events,\
+	com.kk.evemarket.common.settings,\
+	com.kk.evemarket.common.trade
+
+Private-Package:  \
+	com.kk.evemarket.common
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	com.fasterxml.jackson.core.jackson-annotations,\
+	osgi.annotation
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8

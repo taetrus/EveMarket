@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="sample.provider" increment="1566498286407">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="sample.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.0.201908221824" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.0.201908221824" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="sample.provider"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.0.201908221824" type="Version"/>
+      <attribute name="osgi.wiring.host" value="sample.provider"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="sample.api"/>
+      <attribute name="objectClass" value="sample.api.ISample" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2830" type="Long"/>
+      <attribute name="url" value="generated/sample.provider.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="D1577C3EB7B73CB8BF788013F90F7A2E9D0ECF466928F96E768E30F34FE87281"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>
+      <attribute name="project.path" value="/sample.provider"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=sample.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

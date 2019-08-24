@@ -1,0 +1,27 @@
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.core;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	com.kk.evemarket.view.api,\
+	com.kk.evemarket.common,\
+	org.controlsfx,\
+	com.kk.evemarket.model.api,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-databind
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
+-privatepackage: \
+	com.kk.evemarket.viewpartprovider,\
+	com.kk.evemarket.viewpartprovider.progress,\
+	com.kk.evemarket.viewpartprovider.table,\
+	com.kk.evemarket.viewpartprovider.toolbar

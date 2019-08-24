@@ -1,0 +1,25 @@
+#
+# com.kk.evemarket.model.api DEFAULTS
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: 				\
+	This project contains a complete example with API, provider, and JUnit test code. \
+	\
+
+Export-Package:  \
+	com.kk.evemarket.model.api
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	com.kk.evemarket.common;version=latest,\
+	osgi.annotation
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-runbundles: org.apache.felix.log;version='[1.0.1,1.0.2)'
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8

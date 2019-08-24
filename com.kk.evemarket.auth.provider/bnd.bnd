@@ -1,0 +1,44 @@
+#
+# com.kk.evemarket.auth.provider PROVIDER BUNDLE
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: \
+	The provider bundle for com.kk.evemarket.auth.provider. \
+	\
+
+Export-Package:  \
+	com.kk.evemarket.auth.provider.api;-provide=true
+
+Private-Package:  \
+	com.kk.evemarket.auth.provider
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	org.apache.oltu.oauth2.common,\
+	org.apache.oltu.oauth2.client,\
+	org.eclipse.jetty.server,\
+	org.eclipse.jetty.util,\
+	org.apache.commons.codec,\
+	com.kk.evemarket.auth.api;version=latest,\
+	javax.servlet:servlet-api,\
+	com.kk.evemarket.common;version=latest,\
+	io.vertx.core,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-csv,\
+	com.fasterxml.jackson.datatype.jackson-datatype-jsr310,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	osgi.core
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-resolve: auto
+
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8

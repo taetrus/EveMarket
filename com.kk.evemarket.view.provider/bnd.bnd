@@ -1,0 +1,45 @@
+#
+# com.kk.evemarket.view.provider PROVIDER BUNDLE
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: \
+	The provider bundle for com.kk.evemarket.view.provider. \
+	\
+
+
+Private-Package:  \
+	com.kk.evemarket.view.provider
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	com.kk.evemarket.view.api;version=latest,\
+	org.apache.felix.dependencymanager,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	osgi.core,\
+	org.osgi.service.metatype.annotations
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-resolve: auto
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=com.kk.evemarket.view.api)',\
+	osgi.identity;filter:='(osgi.identity=com.kk.evemarket.view.launcher.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)'
+	
+-runsystempackages: javafx.event,javafx.application,javafx.scene,javafx.scene.control,javafx.scene.layout,javafx.stage,javafx.collections, javafx.geometry
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
+-runbundles: \
+	com.kk.evemarket.view.api;version='[1.0.0,1.0.1)',\
+	com.kk.evemarket.view.launcher.provider;version='[1.0.0,1.0.1)',\
+	org.apache.felix.configadmin;version='[1.9.8,1.9.9)',\
+	org.apache.felix.dependencymanager;version='[3.2.0,3.2.1)',\
+	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
+	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
+	org.apache.felix.scr;version='[2.1.10,2.1.11)',\
+	org.osgi.service.metatype;version='[1.4.0,1.4.1)'

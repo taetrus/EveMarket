@@ -1,0 +1,18 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-baseline: *
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	sample.api;version=latest,\
+	com.kk.evemarket.view.api;version=latest
+
+javac.source: 1.8
+javac.target: 1.8
+
+-includeresource: resources
+-privatepackage: sample.application
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
+-runsystempackages: javafx.event,javafx.application,javafx.scene,javafx.scene.control,javafx.scene.layout,javafx.stage,javafx.collections
+

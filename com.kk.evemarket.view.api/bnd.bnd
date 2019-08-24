@@ -1,0 +1,27 @@
+#
+# com.kk.evemarket.view.api DEFAULTS
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: 				\
+	This project contains a complete example with API, provider, and JUnit test code. \
+	\
+
+Export-Package:  \
+	com.kk.evemarket.view.api
+	
+Export-Service: \
+com.kk.evemarket.view.api.IStageService
+
+-includeresource: {readme.md}
+
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-resolve: auto
+-runsystempackages: javafx.event,javafx.application,javafx.scene,javafx.scene.control,javafx.scene.layout,javafx.stage,javafx.collections
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
+-buildpath: osgi.annotation

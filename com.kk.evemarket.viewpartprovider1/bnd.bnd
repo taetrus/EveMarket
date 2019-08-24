@@ -1,0 +1,32 @@
+#
+# com.kk.evemarket.viewpartprovider1 PROVIDER BUNDLE
+#
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: \
+	The provider bundle for com.kk.evemarket.viewpartprovider1. \
+	\
+
+Export-Package:  \
+	com.kk.evemarket.viewpartprovider1.api;-provide=true
+
+Private-Package:  \
+	com.kk.evemarket.viewpartprovider1
+
+-includeresource: {readme.md}
+
+-buildpath: \
+	com.kk.evemarket.view.api;version=latest,\
+	org.controlsfx,\
+	com.kk.evemarket.common;version=latest,\
+	com.kk.evemarket.model.api;version=latest,\
+	osgi.cmpn,\
+	org.osgi.service.metatype.annotations
+
+-testpath: \
+	org.hamcrest:hamcrest-core,\
+	junit:junit
+
+-resolve: auto
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
