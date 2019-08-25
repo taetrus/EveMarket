@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.auth.provider" increment="1566498818164">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.auth.provider" increment="1566743869979">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.auth.provider"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="version" value="1.0.0.201908251437" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.auth.provider"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.auth.provider"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -28,10 +28,10 @@
       <attribute name="objectClass" value="org.osgi.service.event.EventHandler" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="19143" type="Long"/>
+      <attribute name="size" value="19195" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.auth.provider.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="473F51AE2C13FAEC509FF5A0CB54A7FC3E990CB8B9F23E379E9D45CA19C16F50"/>
+      <attribute name="osgi.content" value="9BD30B0872FEC96718CFBC9810B7BDF5437B6716AFBB2DA1DDD3C4B709169DC2"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>

@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.auth.api" increment="1566498283500">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.auth.api" increment="1566743869477">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.auth.api"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201908221824" type="Version"/>
+      <attribute name="version" value="1.0.0.201908251437" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201908221824" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.auth.api"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201908221824" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.auth.api"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -19,10 +19,10 @@
       <attribute name="osgi.wiring.package" value="com.kk.evemarket.auth.api"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="4621" type="Long"/>
+      <attribute name="size" value="4673" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.auth.api.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="BDC624E47CFA0047DA0671B6CCEFFA19D113A3893551524A893EE6EC182A34FB"/>
+      <attribute name="osgi.content" value="FAA4BCC4B1A21EBBD3D0BEE362B628725D8B2A72013C5E9CF8D17153201E323F"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>

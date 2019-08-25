@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.model.provider" increment="1566498819686">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.model.provider" increment="1566743871386">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.model.provider"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="version" value="1.0.0.201908251437" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.model.provider"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201908221833" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.model.provider"/>
     </capability>
     <capability namespace="osgi.service">
@@ -19,10 +19,10 @@
       <attribute name="objectClass" value="com.kk.evemarket.model.api.IEveMarketModel,org.osgi.service.event.EventHandler" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="1531481" type="Long"/>
+      <attribute name="size" value="1531535" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.model.provider.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="6172EBE0352CEEC182DCB140049EAD7F613535EEF8AC169D2086F2B68BDB949D"/>
+      <attribute name="osgi.content" value="DAD0D6859050A3301DB7A9E11AD90FFFA906C62E0E4BD3D9E07C96A007ED0DDB"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>
