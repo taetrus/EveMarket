@@ -5,6 +5,8 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.view.api.IEveMarketView;
 import com.kk.evemarket.view.api.IStageService;
@@ -23,6 +25,7 @@ import javafx.stage.Stage;
 
 @Component
 public class EveMarketView implements IEveMarketView {
+	private static Logger LOGGER = LoggerFactory.getLogger("EveMarketView");
 	private String name;
 	private IStageService stageService;
 	private BorderPane root = new BorderPane();
@@ -43,7 +46,7 @@ public class EveMarketView implements IEveMarketView {
 	// public void addPart(ServiceReference sr, IViewPart provider) {
 	public void addPart(IViewPart provider) {
 
-		System.out.println("EveMarketView.addPart(): " + provider.getName() + " added");
+		LOGGER.info("EveMarketView.addPart(): " + provider.getName() + " added");
 
 		if (!guiInitialized)
 			guiInitialized = initGui();
@@ -67,7 +70,7 @@ public class EveMarketView implements IEveMarketView {
 	}
 
 	public EveMarketView() {
-		System.out.println("EveMarketView.EveMarketView()");
+		LOGGER.info("EveMarketView.EveMarketView()");
 	}
 
 	@ObjectClassDefinition
@@ -83,7 +86,7 @@ public class EveMarketView implements IEveMarketView {
 
 	@Override
 	public Parent getView() {
-		System.out.println("EveMarketView.getView()");
+		LOGGER.info("EveMarketView.getView()");
 
 		if (!guiInitialized)
 			guiInitialized = initGui();

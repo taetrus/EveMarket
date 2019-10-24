@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.kk.evemarket.common.trade.CharacterInfo;
 
 import net.troja.eve.esi.ApiCallback;
@@ -12,7 +15,7 @@ import net.troja.eve.esi.api.MarketApi;
 import net.troja.eve.esi.model.CharacterOrdersResponse;
 
 public class OrderManager {
-
+	private static Logger LOGGER = LoggerFactory.getLogger("OrderManager");
 	private static OrderManager orderManager;
 
 	private OrderManager() {
@@ -52,7 +55,7 @@ public class OrderManager {
 //									// benim order'lardan daha yenisi var mı
 //									// buylardan yuksek, sell'lerden dusuk var mı
 //
-//									System.out.println(
+//									LOGGER.info(
 //											"OrderManager.checkUndercutOrders(...).new ApiCallback() {...}.onSuccess()");
 //								} catch (ApiException e) {
 //									// TODO Auto-generated catch block
@@ -60,15 +63,13 @@ public class OrderManager {
 //								}
 							});
 
-							System.out.println(
-									"OrderManager.checkUndercutOrders(...).new ApiCallback() {...}.onSuccess()");
+							LOGGER.info("OrderManager.checkUndercutOrders(...).new ApiCallback() {...}.onSuccess()");
 						}
 
 						@Override
 						public void onFailure(ApiException e, int statusCode,
 								Map<String, List<String>> responseHeaders) {
-							System.out.println(
-									"OrderManager.checkUndercutOrders(...).new ApiCallback() {...}.onFailure()");
+							LOGGER.info("OrderManager.checkUndercutOrders(...).new ApiCallback() {...}.onFailure()");
 						}
 
 						@Override

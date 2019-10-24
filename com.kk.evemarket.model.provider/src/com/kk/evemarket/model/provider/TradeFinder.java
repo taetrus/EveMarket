@@ -8,6 +8,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.function.Consumer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.kk.evemarket.common.events.ModelProgress;
 import com.kk.evemarket.common.events.ModelState;
 import com.kk.evemarket.common.trade.Trade;
@@ -29,7 +32,7 @@ import net.troja.eve.esi.model.MarketOrdersResponse;
 import net.troja.eve.esi.model.TypeResponse;
 
 public class TradeFinder {
-
+	private static Logger LOGGER = LoggerFactory.getLogger("TradeFinder");
 	private static TradeFinder tradeFinder;
 	// private ConcurrentHashMap<Integer, List<MarketHistory>>
 	// typeIDMarketHistoryMap;
@@ -52,7 +55,7 @@ public class TradeFinder {
 	}
 
 	public ObservableList<Trade> getTrades() {
-		System.out.println(trades);
+		LOGGER.info(trades.toString());
 		return trades;
 	}
 
@@ -121,7 +124,7 @@ public class TradeFinder {
 							itemNameFromNo = universeTypesTypeId.getName();
 						}
 
-						System.out.println(itemNameFromNo + " vol: " + volume + " margin: " + margin);
+						LOGGER.info(itemNameFromNo + " vol: " + volume + " margin: " + margin);
 
 						double profit = (lowestSell - highestBuy) - (lowestSell * (parameters.getFeeTax())) / 100;
 
@@ -137,11 +140,11 @@ public class TradeFinder {
 			} catch (ApiException e) {
 
 				String itemNameFromNo = Utils.getItemNameFromNo(typeID);
-				System.err.println(typeID + ": " + itemNameFromNo + "NOT FOUND");
+				LOGGER.error(typeID + ": " + itemNameFromNo + "NOT FOUND");
 
 			} catch (NoSuchElementException e) {
 				String itemNameFromNo = Utils.getItemNameFromNo(typeID);
-				System.err.println(typeID + ": " + itemNameFromNo + " NO SUCH ELEMENT");
+				LOGGER.error(typeID + ": " + itemNameFromNo + " NO SUCH ELEMENT");
 			}
 
 		};

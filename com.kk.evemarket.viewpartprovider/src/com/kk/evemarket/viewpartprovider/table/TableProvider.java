@@ -6,6 +6,8 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.event.EventAdmin;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.model.api.IEveMarketModel;
 import com.kk.evemarket.view.api.IViewPart;
@@ -14,6 +16,7 @@ import javafx.scene.Node;
 
 @Component(name = "TableProvider")
 public class TableProvider implements IViewPart {
+	private static Logger LOGGER = LoggerFactory.getLogger("TableProvider");
 	private String name;
 	private IEveMarketModel model;
 
@@ -34,7 +37,7 @@ public class TableProvider implements IViewPart {
 
 	@Activate
 	void activate(Config config) {
-		System.out.println("ViewPart.activate()");
+		LOGGER.info("ViewPart.activate()");
 		this.name = config.name();
 	}
 

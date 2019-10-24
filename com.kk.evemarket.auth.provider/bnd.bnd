@@ -32,7 +32,8 @@ Private-Package:  \
 	osgi.annotation,\
 	osgi.cmpn,\
 	osgi.core,\
-	io.vertx.core
+	io.vertx.core,\
+	slf4j.api
 
 -testpath: \
 	org.hamcrest:hamcrest-core,\

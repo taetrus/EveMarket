@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="sample.application" increment="1571860101635">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="sample.application" increment="1571936070481">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="sample.application"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201910231948" type="Version"/>
+      <attribute name="version" value="1.0.0.201910241654" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201910231948" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201910241654" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="sample.application"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201910231948" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201910241654" type="Version"/>
       <attribute name="osgi.wiring.host" value="sample.application"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6058" type="Long"/>
+      <attribute name="size" value="6057" type="Long"/>
       <attribute name="url" value="generated/sample.application.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="38F35E6C354F9EA7F0397774AACD49C7FA08A141A237E71DCC2AEB070B5E72F4"/>
+      <attribute name="osgi.content" value="0D4B72F91CD127DB29EA31812E95DED729655F6FEE406E2F86926680DA1D9118"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>

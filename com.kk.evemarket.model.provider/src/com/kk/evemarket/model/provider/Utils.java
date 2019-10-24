@@ -79,7 +79,6 @@ public class Utils {
 			e.printStackTrace();
 		}
 
-		System.out.println();
 	}
 
 	public static <T> List<T> readObjectsFromCsv(File file, Class<?> typeRef) throws IOException {

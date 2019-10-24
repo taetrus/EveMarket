@@ -30,6 +30,8 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.event.EventAdmin;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -39,6 +41,8 @@ import com.kk.evemarket.common.trade.CharacterInfo;
 
 @Component(name = "com.kk.evemarket.auth.provider", immediate = true)
 public class Authenticator extends AbstractHandler implements IAuthenticator {
+	private static Logger LOGGER = LoggerFactory.getLogger("Authenticator");
+
 	private TimerTask refreshTask;
 	private Timer refreshTimer;
 
@@ -58,7 +62,7 @@ public class Authenticator extends AbstractHandler implements IAuthenticator {
 
 	@Activate
 	void activate() {
-		System.out.println("Authenticator.activate()");
+		LOGGER.info("Authenticator.activate()");
 		AuthenticatorEventHandler.callback = this;
 	}
 
@@ -97,7 +101,7 @@ public class Authenticator extends AbstractHandler implements IAuthenticator {
 		OAuthResourceResponse oAuthResponse = oAuthClient.resource(tokenVerifyRequest, OAuth.HttpMethod.GET,
 				OAuthResourceResponse.class);
 
-		System.out.println("Utils.getCharacterInfo(): " + oAuthResponse.getBody());
+		LOGGER.info("Utils.getCharacterInfo(): " + oAuthResponse.getBody());
 
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(new JavaTimeModule());
@@ -120,7 +124,7 @@ public class Authenticator extends AbstractHandler implements IAuthenticator {
 			code = request.getParameter("code");
 
 			if (code == null) {
-				System.out.println();
+				LOGGER.error("code is null");
 			} else {
 				try {
 					accessToken = getAccessToken(Constants.ACCESS_TOKEN_URL, code, base64Encoded,
@@ -171,7 +175,7 @@ public class Authenticator extends AbstractHandler implements IAuthenticator {
 							@Override
 							public void run() {
 								try {
-									System.out.println("Refresh");
+									LOGGER.info("Refresh");
 									OAuthClientResponse accessToken = getRefreshToken(Constants.ACCESS_TOKEN_URL, code,
 											base64Encoded, GrantType.REFRESH_TOKEN, refreshToken);
 									token = ((OAuthJSONAccessTokenResponse) accessToken).getAccessToken();

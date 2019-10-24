@@ -12,6 +12,8 @@ import org.osgi.service.event.EventAdmin;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.common.events.EveMarketEventConstants;
 import com.kk.evemarket.common.events.ModelProgress;
@@ -35,6 +37,7 @@ import net.troja.eve.esi.api.UserInterfaceApi;
 		EventConstants.EVENT_TOPIC + "=" + EveMarketEventConstants.TOPIC_OPEN_IN_GAME,
 		EventConstants.EVENT_TOPIC + "=" + EveMarketEventConstants.TOPIC_CHARACTER_INFO })
 public class EveMarketModel implements IEveMarketModel, EventHandler {
+	private static Logger LOGGER = LoggerFactory.getLogger("EveMarketModel");
 
 	private String name;
 	private String accessToken;
@@ -52,7 +55,7 @@ public class EveMarketModel implements IEveMarketModel, EventHandler {
 
 	@Activate
 	void activate(Config config) {
-		System.out.println("EveMarketModel.activate()");
+		LOGGER.info("EveMarketModel.activate()");
 		this.name = config.name();
 
 		Event modelState = ModelEventHandler.getModelState(new ModelProgress(ModelState.Initial, 0));
@@ -121,18 +124,18 @@ public class EveMarketModel implements IEveMarketModel, EventHandler {
 	public void handleEvent(Event event) {
 
 		String topic = event.getTopic();
-		System.out.println("EveMarketModel.handleEvent():" + topic);
+		LOGGER.info("EveMarketModel.handleEvent():" + topic);
 		Object property = null;
 		switch (topic) {
 		case EveMarketEventConstants.TOPIC_ACCESS_TOKEN:
 			property = event.getProperty(EveMarketEventConstants.ACCESS_TOKEN);
 			accessToken = property.toString();
-			System.out.println(accessToken);
+			LOGGER.info(accessToken);
 			break;
 		case EveMarketEventConstants.TOPIC_REFRESH_TOKEN:
 			property = event.getProperty(EveMarketEventConstants.REFRESH_TOKEN);
 			refreshToken = property.toString();
-			System.out.println(refreshToken);
+			LOGGER.info(refreshToken);
 			break;
 		case EveMarketEventConstants.TOPIC_FIND_TRADES:
 			property = event.getProperty(EveMarketEventConstants.TRADE_PARAMETERS);
@@ -171,7 +174,7 @@ public class EveMarketModel implements IEveMarketModel, EventHandler {
 
 	// @Override
 	// public void handleEvent(Event event) {
-	// System.out.println("EveMarketModel.handleEvent()");
+	// LOGGER.info("EveMarketModel.handleEvent()");
 	// }
 
 }

@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.model.provider" increment="1571325321947">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.model.provider" increment="1571932948821">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.model.provider"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201910171515" type="Version"/>
+      <attribute name="version" value="1.0.0.201910241602" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201910171515" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201910241602" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.model.provider"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201910171515" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201910241602" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.model.provider"/>
     </capability>
     <capability namespace="osgi.service">
@@ -19,10 +19,10 @@
       <attribute name="objectClass" value="com.kk.evemarket.model.api.IEveMarketModel,org.osgi.service.event.EventHandler" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="1531530" type="Long"/>
+      <attribute name="size" value="1531854" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.model.provider.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="EAFBE0952E892459C4B92BD524F427E9B30AED404AD8773902D2664B4E586A9B"/>
+      <attribute name="osgi.content" value="DAF9D9328B0A7DFE2C9C96B2E401B2FDA9BE3651FF12F5C511E0D3A9CA5C90CA"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>
@@ -69,6 +69,9 @@
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.event)(&amp;(version&gt;=1.3.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
     </requirement>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>

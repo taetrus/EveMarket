@@ -10,6 +10,8 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.event.EventAdmin;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.view.api.IViewPart;
 
@@ -20,6 +22,7 @@ import javafx.scene.control.Button;
 //@Designate(ocd = ToolbarProvider.Config.class, factory = true)
 @Component(name = "ToolbarProvider", immediate = true)
 public class ToolbarProvider implements IViewPart {
+	private static Logger LOGGER = LoggerFactory.getLogger("ToolbarProvider");
 	private String name;
 	public static BundleContext bundleContext;
 
@@ -35,7 +38,7 @@ public class ToolbarProvider implements IViewPart {
 
 	@Activate
 	void activate(Config config) {
-		System.out.println("ToolbarProvider.activate()");
+		LOGGER.info("ToolbarProvider.activate()");
 		this.name = config.name();
 
 		bundleContext = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
@@ -60,7 +63,7 @@ public class ToolbarProvider implements IViewPart {
 			//
 			// controller.getLblFeeTax().setText(String.valueOf(123));
 
-			System.out.println("ToolbarProvider.getViewPart()");
+			LOGGER.info("ToolbarProvider.getViewPart()");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

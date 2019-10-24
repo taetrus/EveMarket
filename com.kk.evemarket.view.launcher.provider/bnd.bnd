@@ -21,7 +21,8 @@ Private-Package:  \
 	osgi.cmpn,\
 	osgi.core,\
 	org.apache.felix.dependencymanager,\
-	org.osgi.service.metatype.annotations
+	org.osgi.service.metatype.annotations,\
+	slf4j.api
 
 -testpath: \
 	org.hamcrest:hamcrest-core,\

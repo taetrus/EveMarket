@@ -8,12 +8,15 @@ import org.osgi.service.event.Event;
 import org.osgi.service.event.EventAdmin;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.common.events.EveMarketEventConstants;
 import com.kk.evemarket.common.trade.CharacterInfo;
 
 @Component(property = { EventConstants.EVENT_TOPIC + "=" + EveMarketEventConstants.TOPIC_START_AUTH })
 public class AuthenticatorEventHandler implements EventHandler {
+	private static Logger LOGGER = LoggerFactory.getLogger("AuthenticatorEventHandler");
 
 	public static EventAdmin eventAdmin;
 
@@ -57,7 +60,7 @@ public class AuthenticatorEventHandler implements EventHandler {
 
 		switch (topic) {
 		case EveMarketEventConstants.TOPIC_START_AUTH:
-			System.out.println(topic);
+			LOGGER.info(topic);
 			callback.authenticate();
 			break;
 

@@ -27,6 +27,7 @@ import javafx.scene.layout.Priority;
 @Component(name = "ProgressProvider", property = {
 		EventConstants.EVENT_TOPIC + "=" + EveMarketEventConstants.TOPIC_MODEL_PROGRESS }, immediate = true)
 public class ProgressProvider implements IViewPart, EventHandler {
+	private static Logger LOGGER = LoggerFactory.getLogger("ProgressProvider");
 	private String name;
 	private ModelState modelState = ModelState.Initial;
 	private ProgressIndicator progressIndicator;
@@ -87,7 +88,7 @@ public class ProgressProvider implements IViewPart, EventHandler {
 	public void handleEvent(Event event) {
 
 		String topic = event.getTopic();
-		System.out.println("ProgressProvider.handleEvent():" + topic);
+		LOGGER.info("ProgressProvider.handleEvent():" + topic);
 		Object property = null;
 		switch (topic) {
 		case EveMarketEventConstants.TOPIC_MODEL_PROGRESS:

@@ -2,7 +2,8 @@
 	osgi.annotation;version=7.0.0,\
 	osgi.core;version=7.0.0,\
 	osgi.cmpn;version=7.0.0,\
-	sample.api;version=latest
+	sample.api;version=latest,\
+	slf4j.api
 
 -testpath: \
 	${junit},\

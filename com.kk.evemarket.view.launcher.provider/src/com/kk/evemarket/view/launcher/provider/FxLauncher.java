@@ -10,6 +10,8 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.view.api.IStageService;
 
@@ -20,6 +22,7 @@ import javafx.stage.Stage;
 @Designate(ocd = FxLauncher.Config.class, factory = false)
 @Component
 public class FxLauncher extends Application {
+	private static Logger LOGGER = LoggerFactory.getLogger("FxLauncher");
 	private String name;
 	private IStageService stageService;
 
@@ -32,7 +35,7 @@ public class FxLauncher extends Application {
 	void activate(Config config) {
 		this.name = config.name();
 
-		System.out.println("App.activate()");
+		LOGGER.info("App.activate()");
 
 		Executors.defaultThreadFactory().newThread(() -> {
 			Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
@@ -47,7 +50,7 @@ public class FxLauncher extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		System.out.println("App.start()");
+		LOGGER.info("App.start()");
 
 		BundleContext bc = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		DependencyManager dependencyManager = new DependencyManager(bc);
