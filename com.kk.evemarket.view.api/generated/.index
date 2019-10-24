@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.view.api" increment="1566743871722">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.view.api" increment="1569769645289">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.view.api"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201908251437" type="Version"/>
+      <attribute name="version" value="1.0.0.201909291507" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909291507" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.view.api"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" value="com.kk.evemarket.view.api.IStageService"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201908251437" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909291507" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.view.api"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -23,10 +23,10 @@
       <attribute name="osgi.wiring.package" value="com.kk.evemarket.view.api"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="4780" type="Long"/>
+      <attribute name="size" value="4782" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.view.api.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="2E4A54149F5AE6802F22D5590F1522F27FF7437DA1918A3C9B70EC71D8EB1425"/>
+      <attribute name="osgi.content" value="CA9437F12B4BDDD0B531FBB036A63FBE788AC7B64E5EE9A9CA74FABBC3E7A0FF"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>

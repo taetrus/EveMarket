@@ -5,8 +5,13 @@
 -resolve.effective: active
 
 -runproperties: \
+	osgi.console.enable.builtin=false,\
 	osgi.console=,\
-	osgi.console.enable.builtin=false
+	org.osgi.service.log.admin.loglevel=DEBUG,\
+	equinox.log.history.max = 1000,\
+	org.osgi.service.http.port=8080,\
+	eclipse.log.enabled=false,\
+	logback.configurationFile=file:${.}/logback.xml
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
@@ -20,12 +25,14 @@
 	bnd.identity;id='com.kk.evemarket.view.api',\
 	bnd.identity;version='latest';id='com.kk.evemarket.auth.api',\
 	bnd.identity;version='latest';id='com.kk.evemarket.auth.provider',\
-	osgi.identity;filter:='(&(osgi.identity=org.ops4j.pax.logging.pax-logging-api)(version>=1.11.0))',\
 	bnd.identity;id='com.kk.evemarket.view',\
-	bnd.identity;id='com.kk.evemarket.viewpartprovider'
+	bnd.identity;id='com.kk.evemarket.viewpartprovider',\
+	bnd.identity;id='org.apache.felix.log',\
+	bnd.identity;id='org.apache.felix.logback',\
+	bnd.identity;id='slf4j.api',\
+	bnd.identity;id='ch.qos.logback.classic',\
+	bnd.identity;id='ch.qos.logback.core'
 -runbundles: \
-	org.apache.felix.configadmin;version='[1.9.8,1.9.9)',\
-	org.apache.felix.configurator;version='[1.0.6,1.0.7)',\
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
 	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
 	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
@@ -56,10 +63,16 @@
 	org.eclipse.jetty.io;version='[9.4.12,9.4.13)',\
 	org.eclipse.jetty.server;version='[9.4.12,9.4.13)',\
 	org.eclipse.jetty.util;version='[9.4.12,9.4.13)',\
-	org.ops4j.pax.logging.pax-logging-api;version='[1.11.0,1.11.1)',\
 	com.kk.evemarket.view;version='[0.0.0,0.0.1)',\
 	com.kk.evemarket.viewpartprovider;version='[0.0.0,0.0.1)',\
-	eve-esi-fatty;version='[3.5.2,3.5.3)'
+	eve-esi-fatty;version='[3.5.2,3.5.3)',\
+	org.apache.felix.configadmin;version='[1.9.16,1.9.17)',\
+	org.apache.felix.log;version='[1.2.2,1.2.3)',\
+	ch.qos.logback.classic;version='[1.2.0,1.2.1)',\
+	ch.qos.logback.core;version='[1.2.3,1.2.4)',\
+	org.apache.felix.logback;version='[1.0.0,1.0.1)',\
+	slf4j.api;version='[1.7.25,1.7.26)',\
+	org.apache.felix.configurator;version='[1.0.6,1.0.7)'
 -runsystempackages:\
 com.sun.javafx.collections,\
 com.sun.javafx.css,\

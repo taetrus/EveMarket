@@ -8,6 +8,8 @@ import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.common.events.EveMarketEventConstants;
 import com.kk.evemarket.common.events.ModelProgress;
@@ -29,6 +31,8 @@ public class ProgressProvider implements IViewPart, EventHandler {
 	private ModelState modelState = ModelState.Initial;
 	private ProgressIndicator progressIndicator;
 
+	Logger log = LoggerFactory.getLogger(this.getClass());
+
 	@ObjectClassDefinition
 	@interface Config {
 		String name() default "Part3";
@@ -36,12 +40,12 @@ public class ProgressProvider implements IViewPart, EventHandler {
 
 	@Reference
 	public void setEventHandler(EventHandler eventHandler) {
-		System.out.println("ProgressProvider.setEventHandler()");
+		log.info("ProgressProvider.setEventHandler()");
 	}
 
 	@Activate
 	void activate(Config config) {
-		System.out.println("ProgressProvider.activate()");
+		log.info("ProgressProvider.activate()");
 		this.name = config.name();
 	}
 

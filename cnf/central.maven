@@ -1,2 +1,15 @@
 # List repository contents using GAV coordinates
-
+io.vertx:vertx-core:3.8.1
+org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
+org.apache.oltu.oauth2:org.apache.oltu.oauth2.common:1.0.2
+org.ops4j.pax.logging:pax-logging-api:1.11.2
+org.ops4j.pax.logging:pax-logging-log4j2:1.11.2
+org.ops4j.pax.logging:pax-logging-service:1.11.2
+org.apache.felix:org.apache.felix.configadmin:1.9.16
+org.apache.felix:org.apache.felix.webconsole:4.3.16
+org.apache.felix:org.apache.felix.webconsole.plugins.ds:2.1.0
+org.apache.felix:org.apache.felix.log:1.2.2
+org.apache.felix:org.apache.felix.logback:1.0.0
+org.slf4j:slf4j-api:1.7.25
+ch.qos.logback:logback-core:1.2.0
+ch.qos.logback:logback-classic:1.2.0

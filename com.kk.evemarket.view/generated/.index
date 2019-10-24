@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.view" increment="1566743872266">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="com.kk.evemarket.view" increment="1571083698077">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.kk.evemarket.view"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201908251437" type="Version"/>
+      <attribute name="version" value="0.0.0.201910142008" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201908251437" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910142008" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="com.kk.evemarket.view"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201908251437" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910142008" type="Version"/>
       <attribute name="osgi.wiring.host" value="com.kk.evemarket.view"/>
     </capability>
     <capability namespace="osgi.service">
@@ -19,10 +19,10 @@
       <attribute name="objectClass" value="com.kk.evemarket.view.api.IEveMarketView" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="7115" type="Long"/>
+      <attribute name="size" value="7111" type="Long"/>
       <attribute name="url" value="generated/com.kk.evemarket.view.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="46F585F35DB68EBC79BA56F4991D2A98D09153D0A84C61DC449E6A86D9DA93D6"/>
+      <attribute name="osgi.content" value="92A7899AF8F8B0EC2FC82064435DAC9BFFBAE262C8E9E0AACD661B3D2CCE579F"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/D:/Workspaces/W01"/>

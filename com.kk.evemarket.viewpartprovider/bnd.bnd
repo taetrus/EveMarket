@@ -7,7 +7,8 @@
 	org.controlsfx,\
 	com.kk.evemarket.model.api,\
 	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-databind
+	com.fasterxml.jackson.core.jackson-databind,\
+	slf4j.api;version=1.7
 
 -testpath: \
 	${junit},\

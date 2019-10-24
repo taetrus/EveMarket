@@ -5,7 +5,8 @@ Bundle-Version: 1.0.0.${tstamp}
 	osgi.annotation;version=7.0.0,\
 	osgi.cmpn;version=7.0.0,\
 	sample.api;version=latest,\
-	com.kk.evemarket.view.api;version=latest
+	com.kk.evemarket.view.api;version=latest,\
+	slf4j.api
 
 javac.source: 1.8
 javac.target: 1.8

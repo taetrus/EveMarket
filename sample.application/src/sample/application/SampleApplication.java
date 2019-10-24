@@ -3,6 +3,8 @@ package sample.application;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.kk.evemarket.view.api.IEveMarketView;
 import com.kk.evemarket.view.api.IStageService;
@@ -20,11 +22,35 @@ public class SampleApplication {
 //	private ISample sample;
 	private IEveMarketView viewService;
 	private IStageService stageService;
+	Logger log = LoggerFactory.getLogger(this.getClass());
 
 //	@Reference
 //	public void setSample(ISample service) {
-//		System.out.println("SampleApplication.setSample()");
+//		log.info("SampleApplication.setSample()");
 //		sample = service;
+//	}
+
+//	@Reference
+//	public void setCm(ConfigurationAdmin service) {
+//		log.info("SampleApplication.setCm()");
+//
+//		try {
+//
+//			Configuration configuration = service.getConfiguration("org.osgi.service.log.admin");
+//
+//			Configuration createFactoryConfiguration = service.createFactoryConfiguration("sample.application");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+
+//	@Reference(service=LoggerFactory.class)
+//	public void setLogger(LoggerFactory service) {
+//		log.info("SampleApplication.setLogger(): " + service.toString());
+//
+//		service.getLogger(this.getClass()).error("KK Deneme");
+//
 //	}
 
 	@Reference
@@ -39,13 +65,15 @@ public class SampleApplication {
 
 	@Activate
 	public void start() {
-		System.out.println("SampleApplication.start()");
+
+		log.info("KKKKK Denemem");
+		log.info("SampleApplication.start()");
 //
 //		sample.sample();
 
-		System.out.println("EveMarket.start()");
+		log.info("EveMarket.start()");
 		Platform.runLater(() -> {
-			System.out.println("EveMarketView.activate2()");
+			log.info("EveMarketView.activate2()");
 			Stage primaryStage = stageService.getStage();
 			primaryStage.setTitle("Hello World");
 			Parent view = viewService.getView();
@@ -58,7 +86,7 @@ public class SampleApplication {
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				@Override
 				public void handle(WindowEvent we) {
-					System.out.println("Stage is closing");
+					log.info("Stage is closing");
 					System.exit(0);
 				}
 			});
